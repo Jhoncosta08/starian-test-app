@@ -1,0 +1,29 @@
+
+<div class="modal-header">
+  <h5 class="modal-title">
+    {{ data && data.title ? data.title : 'Confirmação' }}
+  </h5>
+  <button type="button" class="btn-close" data-dismiss="modal" aria-label="close-icon"></button>
+</div>
+
+<div class="modal-body">
+  <p>
+    {{ data && data.description ? data.description : 'Tem certeza que deseja realizar essa ação?' }}
+  </p>
+</div>
+
+<div class="modal-footer">
+
+  <app-common-button
+    (click)="closeModal()"
+    [buttonText]="'Cancelar'"
+    [buttonStyle]="'outlined'">
+  </app-common-button>
+
+  <app-common-button
+    (click)="confirm(true)"
+    [buttonText]="'Confirmar'"
+    [buttonStyle]="'primary'">
+  </app-common-button>
+
+</div>
