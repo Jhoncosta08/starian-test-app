@@ -2,13 +2,5 @@ import {EnvironmentInterface} from './environments-interface/environment.interfa
 
 export const environment: EnvironmentInterface = {
   production: true,
-  apiUrl: '{API_URL}',
-  firebase: {
-    apiKey: '',
-    authDomain: '',
-    projectId: '',
-    storageBucket: '',
-    messagingSenderId: '',
-    appId: ''
-  }
+  apiUrl: '{API_URL}'
 }
