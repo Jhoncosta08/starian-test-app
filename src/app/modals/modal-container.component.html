@@ -1,0 +1,21 @@
+<div class="modal fade show d-block" tabindex="-1" style="background: rgba(0,0,0,0.5);" (click)="reject()">
+
+  <div
+    class="modal-dialog modal-dialog-centered"
+    role="document"
+    [ngClass]="{
+    'modal-sm': modalSize === 'sm',
+    'modal-lg': modalSize === 'lg',
+    'modal-xl': modalSize === 'xl'
+    }"
+    [ngStyle]="customSizeStyle"
+    (click)="$event.stopPropagation(); onAnyClick($event)"
+  >
+
+    <div class="modal-content">
+      <ng-template #modalContent></ng-template>
+    </div>
+
+  </div>
+
+</div>
