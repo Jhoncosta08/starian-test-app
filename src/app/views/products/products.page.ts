@@ -75,7 +75,7 @@ export class ProductsPage implements OnInit {
   }
 
   deleteProduct(product: ProductsInterface): void {
-    this.modalService.open(ModalConfirmation).then((): void => {
+    void this.modalService.open(ModalConfirmation).then((): void => {
       this.productsService.deleteProduct(product.id).subscribe({
         next: (): void => {
           this.getAllProducts();

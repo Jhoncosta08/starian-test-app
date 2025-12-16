@@ -52,8 +52,8 @@ export class CommonTableComponent implements OnChanges  {
     }
 
     this.tableConfig.tableData.sort((a: any, b: any): number => {
-      let valA = a[column];
-      let valB = b[column];
+      const valA = a[column];
+      const valB = b[column];
 
       if (valA == null) return 1;
       if (valB == null) return -1;
