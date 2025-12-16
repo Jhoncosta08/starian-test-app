@@ -75,6 +75,8 @@
 | Guards        | `name.guard.ts` / `compound-name.guard.ts`                      | 
 
 ## Como clonar e configurar o projeto
+> - [x] Certifique-se que tem o `node.js` instalado, a vesão necessária é a: `24.11.0`.
+> - [x] A versão do `NPM` usada na criação desse projeto é a: `11.6.1`.
 > - [x] Clone o projeto, use o código: `git clone <project-url>` para clonar o projeto.
 > - [x] Instale os pacotes npm, use o código: `npm i` para instalar os pacotes.
 > - [x] Execute o projeto, use o código: `npm run dev` para rodar o projeto na configuração de DEVELOPMENT.
