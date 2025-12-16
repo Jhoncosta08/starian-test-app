@@ -11,14 +11,14 @@
 [Gerenciador de Produtos](https://starian-test-app.web.app)
 
 ## As principais tecnologias usadas no projeto
->* Este projeto foi feito com [Angular CLI](https://github.com/angular/angular-cli) version 20.3.0.
->* Este projeto conta com o [Bootstrap](https://getbootstrap.com) version 5.3.8
->* Este projeto conta com o [bootstrap icons](https://icons.getbootstrap.com/) version 1.13.1
->* Este projeto conta com o [@ngx-translate/core](https://www.npmjs.com/package/@ngx-translate/core) version 17.0.0
->* Este projeto conta com o [@ngx-translate/http-loader](https://www.npmjs.com/package/@ngx-translate/http-loader) version 17.0.0
->* Este projeto conta com o [Firebase](https://firebase.google.com/) version 12.6.0
->* Este projeto conta com o [ngx-mask](https://www.npmjs.com/package/ngx-mask) version 20.0.3
->* Este projeto conta com o [ngx-toastr](https://www.npmjs.com/package/ngx-toastr) version 19.1.0
+>* Este projeto foi feito com [Angular CLI](https://github.com/angular/angular-cli) versão 20.3.0.
+>* Este projeto conta com o [Bootstrap](https://getbootstrap.com) versão 5.3.8
+>* Este projeto conta com o [bootstrap icons](https://icons.getbootstrap.com/) versão 1.13.1
+>* Este projeto conta com o [@ngx-translate/core](https://www.npmjs.com/package/@ngx-translate/core) versão 17.0.0
+>* Este projeto conta com o [@ngx-translate/http-loader](https://www.npmjs.com/package/@ngx-translate/http-loader) versão 17.0.0
+>* Este projeto conta com o [Firebase](https://firebase.google.com/) versão 12.6.0
+>* Este projeto conta com o [ngx-mask](https://www.npmjs.com/package/ngx-mask) versão 20.0.3
+>* Este projeto conta com o [ngx-toastr](https://www.npmjs.com/package/ngx-toastr) versão 19.1.0
 
 ## Sobre o Bootstrap
 >Para padronização, boas práticas e responsividade, ao desenvolver novas páginas, pense na estrutura de linhas e colunas seguindo o padrão de grade (grid).
