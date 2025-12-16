@@ -20,3 +20,23 @@
   letter-spacing: 2px;
   margin: 0 1rem;
 };
+
+@media only screen and (max-width: 574px) {
+  .main-header {
+    padding: 0.5rem;
+  };
+
+  .header-title {
+    text-align: end;
+    margin: 0;
+    padding: 0;
+    border: none;
+  };
+
+  .welcome-box {
+    border-top: 1px solid var(--Bright-White);
+    justify-content: center !important;
+    margin: 0.5rem 0;
+    padding-top: 0.5rem;
+  };
+}

@@ -121,9 +121,9 @@
 
     <div class="row">
       <div class="col-sm-12 text-end mt-3">
-        <div class="form-group">
+        <div class="form-group btn-actions-box">
           <app-common-button
-            class="me-2"
+            class="action-btn"
             [buttonText]="'Cancelar'"
             [type]="'button'"
             [buttonStyle]="'outlined-black'"
@@ -132,6 +132,7 @@
           </app-common-button>
 
           <app-common-button
+            class="action-btn"
             [buttonText]="(productId ? 'BUTTONS.EDIT_PRODUCT' : 'BUTTONS.NEW_PRODUCT') | translate"
             [type]="'submit'"
             [buttonStyle]="'primary'"
