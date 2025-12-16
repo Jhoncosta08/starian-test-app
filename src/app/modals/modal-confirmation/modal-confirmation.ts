@@ -2,11 +2,13 @@ import {ChangeDetectionStrategy, Component, inject, Input} from '@angular/core';
 import {ModalConfirmationContentInterface} from '../../interfaces/modal-confirmation.interface';
 import {ModalService} from '../../services/modal/modal.service';
 import {CommonButtonComponent} from '../../components/common-button/common-button.component';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-modal-confirmation',
   imports: [
-    CommonButtonComponent
+    CommonButtonComponent,
+    TranslatePipe
   ],
   templateUrl: './modal-confirmation.html',
   changeDetection: ChangeDetectionStrategy.OnPush

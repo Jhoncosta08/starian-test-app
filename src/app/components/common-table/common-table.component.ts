@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
 import {NgClass} from '@angular/common';
 import {CommonTableConfigInterface} from '../../interfaces/common-table.interface';
 
@@ -9,6 +9,7 @@ import {CommonTableConfigInterface} from '../../interfaces/common-table.interfac
   ],
   templateUrl: './common-table.component.html',
   styleUrls: ['./common-table.component.scss', '../../shared/scss/hover-effects.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CommonTableComponent implements OnChanges  {
   @Input({required: true}) tableConfig!: CommonTableConfigInterface;

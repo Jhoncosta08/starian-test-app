@@ -7,15 +7,20 @@
   },
 
   "ERRORS": {
-    "PRODUCTS_LIST_ERROR": "Erro ao consultar a lista de produtos!"
+    "PRODUCTS_LIST_ERROR": "Erro ao consultar a lista de produtos!",
+    "PRODUCT_DELETE_ERROR": "Erro ao tentar excluir o produto!"
   },
 
   "MODALS": {
-
+    "CONFIRM_TITLE": "Confirmação",
+    "CONFIRM": "Tem certeza que deseja realizar essa ação?",
+    "CONFIRM_DELETE": "Produto excluído com sucesso!"
   },
 
   "BUTTONS": {
-    "ADD_PRODUCT": "Adicionar produto"
+    "ADD_PRODUCT": "Adicionar produto",
+    "CONFIRM": "Confirmar",
+    "CANCEL": "Cancelar"
   },
 
   "TABLE": {

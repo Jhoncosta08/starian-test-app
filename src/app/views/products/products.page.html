@@ -18,6 +18,14 @@
 
 <div class="row">
   <div class="col-sm-12">
-    <app-common-table [tableConfig]="tableConfig"></app-common-table>
+    @if (showSpinner) {
+      <app-common-spinner></app-common-spinner>
+    } @else {
+      <app-common-table
+        [tableConfig]="tableConfig"
+        (detailsClicked)="updateProduct($event)"
+        (deleteClicked)="deleteProduct($event)"
+      ></app-common-table>
+    }
   </div>
 </div>
