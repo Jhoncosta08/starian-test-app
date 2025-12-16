@@ -25,12 +25,12 @@
 
 **Exemplo:**
 
-| Classe padrão grid | Descrição                                                                      |
-|:-------------------|:-------------------------------------------------------------------------------|
-| `.container`       | Container with spacing on the sides (width: 1200px).                           |
-| `.container-fluid` | Container without spacing on the sides(width: 100%).                           |
-| `.row`             | Single div, must be used as a parent div that will have 1 to 12 col child divs |
-| `.col`             | Single div, must be used as a parent div that will have 1 to 12 child divs     | 
+| Classe padrão grid | Descrição                                                                          |
+|:-------------------|:-----------------------------------------------------------------------------------|
+| `.container`       | Container com espaçamento nas laterais (width: 1200px).                            |
+| `.container-fluid` | Container sem espaçamento nas laterais (width: 100%).                              |
+| `.row`             | Div única, deve ser usada como div pai que terá de 1 a 12 divs filhas do tipo col. |
+| `.col`             | Div única, deve ser usada como div pai que terá de 1 a 12 divs filhas.             | 
 
 >***O padrão mostrado acima na tabela apresenta a estrutura das páginas HTML do projeto; novas páginas devem seguir esse padrão.***
 
@@ -86,7 +86,7 @@
 ## Servidor
 > Navegue até `http://localhost:4200/`. A aplicação será recarregada automaticamente se você alterar qualquer um dos arquivos de código-fonte.
 
-## How to build project
+## Como fazer o build por ambiente
 > - [x] O projeto conta com configurações personalizadas por ambiente.
 > - [x] Para build do sistema, use o comando: `npm build-dev` para buildar o sistema em configuração DEVELOPMENT.
 > - [x] Para build do sistema, use o comando: `npm build-qa` para buildar o sistema em configuração QA.
