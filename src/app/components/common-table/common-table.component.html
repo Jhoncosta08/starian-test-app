@@ -4,18 +4,18 @@
     <table class="table">
       <thead>
         <tr>
-          @for (column of columnsToDisplay; track column) {
+          @for (header of tableConfig.tableHeaders; let i = $index; track i) {
             <th
               [ngClass]="{
-              'col-id': column === 'id',
-              'col-title': column === 'title',
-              'col-image': column === 'image',
-              'col-actions': column === 'actions'
+              'col-id': tableConfig.columnsToDisplay[i] === 'id',
+              'col-title': tableConfig.columnsToDisplay[i] === 'title',
+              'col-image': tableConfig.columnsToDisplay[i] === 'image',
+              'col-actions': tableConfig.columnsToDisplay[i] === 'actions'
               }"
             >
-              <span>{{ column }}
-                @if (column !== 'image' && column !== 'actions' ) {
-                  <i (click)="sortData(column)" [ngClass]="getSortIcon(column)"></i>
+              <span>{{ header }}
+                @if (tableConfig.columnsToDisplay[i] !== 'image' && tableConfig.columnsToDisplay[i] !== 'actions' ) {
+                  <i (click)="sortData(tableConfig.columnsToDisplay[i])" [ngClass]="getSortIcon(tableConfig.columnsToDisplay[i])"></i>
                 }
               </span>
             </th>
@@ -26,7 +26,7 @@
       <tbody>
         @for(item of pagedData; track item.id) {
           <tr>
-            @for(column of columnsToDisplay; track column) {
+            @for(column of tableConfig.columnsToDisplay; track column) {
               <td [attr.title]="column === 'title' ? item[column] : null">
                 @switch (column) {
 
@@ -71,7 +71,7 @@
 
     <div class="row w-100 table-footer-container">
       <div class="col-sm w-100 footer-paginator-container">
-        @if (tableData.length > pageSize) {
+        @if (tableConfig.tableData.length > pageSize) {
           <nav>
             <ul class="pagination">
               <li class="page-item" [class.disabled]="currentPage === 1">

@@ -16,5 +16,16 @@
 
   "BUTTONS": {
     "ADD_PRODUCT": "Adicionar produto"
+  },
+
+  "TABLE": {
+    "PRODUCTS_TABLE_HEADERS": {
+      "IMAGE": "Imagem",
+      "ID": "Id",
+      "TITLE": "Título",
+      "PRICE": "Preço",
+      "CATEGORIES": "Categorias",
+      "ACTIONS": "Ações"
+    }
   }
 }

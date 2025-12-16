@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
 import {NgClass} from '@angular/common';
+import {CommonTableConfigInterface} from '../../interfaces/common-table.interface';
 
 @Component({
   selector: 'app-common-table',
@@ -10,8 +11,7 @@ import {NgClass} from '@angular/common';
   styleUrls: ['./common-table.component.scss', '../../shared/scss/hover-effects.scss'],
 })
 export class CommonTableComponent implements OnChanges  {
-  @Input({required: true}) tableData: any[] = [];
-  @Input({required: true}) columnsToDisplay: string[] = [];
+  @Input({required: true}) tableConfig!: CommonTableConfigInterface;
   @Output() detailsClicked: EventEmitter<any> = new EventEmitter<any>();
   @Output() deleteClicked: EventEmitter<any> = new EventEmitter<any>();
   currentPage: number = 1;
@@ -21,7 +21,7 @@ export class CommonTableComponent implements OnChanges  {
   sortDirection: boolean = true;
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['tableData'] && this.tableData?.length) {
+    if (changes['tableConfig'] && this.tableConfig.tableData?.length) {
       this.setPage(1);
     }
   }
@@ -31,11 +31,11 @@ export class CommonTableComponent implements OnChanges  {
     this.currentPage = page;
     const start: number = (page - 1) * this.pageSize;
     const end: number = start + this.pageSize;
-    this.pagedData = [...this.tableData.slice(start, end)];
+    this.pagedData = [...this.tableConfig.tableData.slice(start, end)];
   }
 
   getTotalPages(): number {
-    return Math.ceil(this.tableData.length / this.pageSize);
+    return Math.ceil(this.tableConfig.tableData.length / this.pageSize);
   }
 
   getPages(): number[] {
@@ -50,7 +50,7 @@ export class CommonTableComponent implements OnChanges  {
       this.sortDirection = true;
     }
 
-    this.tableData.sort((a: any, b: any): number => {
+    this.tableConfig.tableData.sort((a: any, b: any): number => {
       let valA = a[column];
       let valB = b[column];
 
