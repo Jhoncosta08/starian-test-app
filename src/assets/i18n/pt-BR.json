@@ -1,0 +1,20 @@
+{
+
+  "PAGES": {
+    "PRODUCTS": {
+      "MANAGE_PRODUCT": "Gerenciar Produtos"
+    }
+  },
+
+  "ERRORS": {
+    "PRODUCTS_LIST_ERROR": "Erro ao consultar a lista de produtos!"
+  },
+
+  "MODALS": {
+
+  },
+
+  "BUTTONS": {
+    "ADD_PRODUCT": "Adicionar produto"
+  }
+}

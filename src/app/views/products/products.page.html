@@ -1,0 +1,22 @@
+
+<div class="row page-container">
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h1 class="page-title">
+        {{'PAGES.PRODUCTS.MANAGE_PRODUCT' | translate}}
+      </h1>
+    </div>
+
+    <div class="col-sm-6 text-end">
+      <app-common-button
+        [buttonText]="'BUTTONS.ADD_PRODUCT' | translate"
+        [type]="'button'"
+        [buttonStyle]="'primary'"
+        (clicked)="addNewProduct()"
+      ></app-common-button>
+    </div>
+  </div>
+
+
+</div>

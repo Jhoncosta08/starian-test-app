@@ -6,13 +6,13 @@ import {NgClass} from '@angular/common';
   imports: [
     NgClass
   ],
-  templateUrl: './common-button.html',
-  styleUrls: ['./common-button.scss', '../../shared/scss/hover-effects.scss'],
+  templateUrl: './common-button.component.html',
+  styleUrls: ['./common-button.component.scss', '../../shared/scss/hover-effects.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CommonButton {
+export class CommonButtonComponent {
   @Output() clicked: EventEmitter<void> = new EventEmitter<void>();
   @Input({required: true}) buttonText: string = 'Button';
   @Input() type: 'button' | 'submit' = 'button';
-  @Input() buttonStyle: 'primary' | 'secondary' | 'outlined' | 'danger' = 'primary';
+  @Input() buttonStyle: 'primary' | 'secondary' | 'outlined' | 'outlined-black' | 'danger' = 'primary';
 }

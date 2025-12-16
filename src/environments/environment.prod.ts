@@ -2,5 +2,5 @@ import {EnvironmentInterface} from './environments-interface/environment.interfa
 
 export const environment: EnvironmentInterface = {
   production: true,
-  apiUrl: '{API_URL}'
+  apiUrl: 'https://fakestoreapi.com'
 }
