@@ -6,3 +6,113 @@
     </h1>
   </div>
 </div>
+
+@if (showSpinner) {
+  <app-common-spinner></app-common-spinner>
+} @else {
+  <form [formGroup]="productDetailForm">
+    <div class="row gap-2">
+
+      <div class="col-sm product-form-box">
+        <div class="image-box text-center mb-4 mt-4">
+          <img
+            [src]="currentProduct?.image ?? 'assets/images/no-img.png'"
+            loading="eager"
+            alt="product-image"
+            [width]="currentProduct?.image ? 150 : 200"
+            [height]="150"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="image">Imagem:</label>
+          <input class="form-control" type="text" name="image" id="image" formControlName="image" />
+          @if (productDetailForm.get('image')?.invalid) {
+            <small class="form-text">URL obrigatória</small>
+          }
+        </div>
+      </div>
+
+
+      <div class="col-sm product-form-box">
+
+        <div class="form-group">
+          <label for="product-id">id:</label>
+          <input class="form-control opacity-25" type="text" name="product-id" id="product-id" formControlName="id" readonly/>
+        </div>
+
+        <div class="form-group">
+          <label for="title">Título:</label>
+          <input class="form-control" type="text" name="title" id="title" formControlName="title" />
+          @if (productDetailForm.get('title')?.invalid) {
+            <small class="form-text">Título obrigatório</small>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="price">Preço:</label>
+          <input
+            class="form-control"
+            type="text"
+            name="price"
+            id="price"
+            formControlName="price"
+            mask="separator.2"
+            thousandSeparator="."
+            decimalMarker=","
+            prefix="R$: "
+          />
+          @if (productDetailForm.get('price')?.invalid) {
+            <small class="form-text">Preço obrigatório</small>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="category">Categoria:</label>
+          <input class="form-control" type="text" name="category" id="category" formControlName="category" />
+          @if (productDetailForm.get('category')?.invalid) {
+            <small class="form-text">Categoria obrigatória</small>
+          }
+        </div>
+
+      </div>
+
+      <div class="col-sm product-form-box">
+        <div class="form-group">
+          <label for="description">Descrição:</label>
+          <textarea
+            class="form-control"
+            type="text"
+            name="description"
+            id="description"
+            formControlName="description"
+            rows="10"
+          >
+          </textarea>
+          @if (productDetailForm.get('description')?.invalid) {
+            <small class="form-text">Descrição obrigatória</small>
+          }
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 text-end mt-3">
+        <div class="form-group">
+          @if (showSubmitSpinner) {
+            <app-common-spinner></app-common-spinner>
+          } @else {
+            <app-common-button
+              [buttonText]="productId ? 'Editar produto' : 'Cadatrar produto'"
+              [type]="'submit'"
+              [buttonStyle]="'primary'"
+            >
+            </app-common-button>
+          }
+        </div>
+      </div>
+    </div>
+
+  </form>
+}

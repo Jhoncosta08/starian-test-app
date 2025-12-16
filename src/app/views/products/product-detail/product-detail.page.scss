@@ -1,6 +1,14 @@
 
 .title-box {
-  width: 100%;
   border-bottom: 1px solid var(--Galaxy-Black);
   padding-bottom: 1rem;
+  margin-bottom: 1rem;
+};
+
+.product-form-box {
+  height: 100%;
+  min-height: 400px;
+  background-color: var(--light-grey);
+  border: 1px solid var(--outline-border);
+  border-radius: 8px;
 };

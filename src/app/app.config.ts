@@ -14,6 +14,7 @@ import {TRANSLATE_HTTP_LOADER_CONFIG, TranslateHttpLoader} from '@ngx-translate/
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {registerLocaleData} from '@angular/common';
 import localePtBr from '@angular/common/locales/pt';
+import {provideNgxMask} from 'ngx-mask';
 
 export function httpTranslateLoader(): TranslateHttpLoader {
   return new TranslateHttpLoader();
@@ -27,6 +28,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes, withPreloading(PreloadAllModules)),
     provideHttpClient(),
     provideAnimations(),
+    provideNgxMask(),
     provideToastr({
       closeButton: true,
       timeOut: 3000,

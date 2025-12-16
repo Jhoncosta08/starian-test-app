@@ -1,21 +1,29 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {TranslatePipe, TranslateService} from '@ngx-translate/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {ProductDetailForm, ProductsInterface} from '../../../interfaces/products.interface';
 import {ActivatedRoute} from '@angular/router';
 import {ProductsService} from '../../../services/products/products.service';
 import {ToastrService} from 'ngx-toastr';
+import {CommonSpinnerComponent} from '../../../components/common-spinner/common-spinner.component';
+import {CommonButtonComponent} from '../../../components/common-button/common-button.component';
+import {NgxMaskDirective} from 'ngx-mask';
 
 @Component({
   selector: 'app-product-detail',
   imports: [
-    TranslatePipe
+    TranslatePipe,
+    CommonSpinnerComponent,
+    ReactiveFormsModule,
+    CommonButtonComponent,
+    NgxMaskDirective
   ],
   templateUrl: './product-detail.page.html',
-  styleUrl: './product-detail.page.scss',
+  styleUrls: ['./product-detail.page.scss', '../../../shared/scss/input.scss'],
 })
 export class ProductDetailPage implements OnInit {
   public showSpinner: boolean = false;
+  public showSubmitSpinner: boolean = false;
   protected productDetailForm!: FormGroup;
   protected productId: number | null = null;
   protected currentProduct: ProductsInterface | null = null;
@@ -38,7 +46,7 @@ export class ProductDetailPage implements OnInit {
     this.productDetailForm = this.fb.group<ProductDetailForm>({
       id: this.fb.control(product?.id ?? null, { nonNullable: false, validators: Validators.required }),
       title: this.fb.control(product?.title ?? '', { nonNullable: true, validators: Validators.required }),
-      price: this.fb.control(product?.price ?? null, { nonNullable: false, validators: Validators.required }),
+      price: this.fb.control(product?.price ?? 0, { nonNullable: false, validators: Validators.required }),
       description: this.fb.control(product?.description ?? '', { nonNullable: true, validators: Validators.required }),
       category: this.fb.control(product?.category ?? '', { nonNullable: true, validators: Validators.required }),
       image: this.fb.control(product?.image ?? '', { nonNullable: true, validators: Validators.required }),

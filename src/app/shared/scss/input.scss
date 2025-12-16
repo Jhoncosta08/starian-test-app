@@ -1,0 +1,36 @@
+input, textarea, select {
+  border: 1px solid var(--Galaxy-Black);
+  border-radius: 3px;
+  box-shadow: none;
+  width: 100%;
+  color: var(--Galaxy-Black);
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+};
+
+input:focus, input:active, input:checked {
+  border: 1px solid var(--Galaxy-Black);
+  box-shadow: none;
+};
+
+input::placeholder {
+  font-weight: 400;
+  opacity: 0.5;
+  color: var(--Space-Grey);
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+};
+
+label {
+  font-weight: 600;
+  color: var(--Galaxy-Black);
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+  margin-bottom: 5px;
+};
+
+small {
+  font-weight: 600;
+  color: var(--danger);
+  font-size: 0.7rem;
+};
