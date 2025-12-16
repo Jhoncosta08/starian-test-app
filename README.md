@@ -90,10 +90,10 @@
 
 ## Como fazer o build por ambiente
 > - [x] O projeto conta com configurações personalizadas por ambiente.
-> - [x] Para build do sistema, use o comando: `npm run build-dev` para buildar o sistema em configuração DEVELOPMENT.
-> - [x] Para build do sistema, use o comando: `npm run build-qa` para buildar o sistema em configuração QA.
-> - [x] Para build do sistema, use o comando: `npm run build-stg` para buildar o sistema em configuração STAGING.
-> - [x] Para build do sistema, use o comando: `npm run build-prod` para buildar o sistema em configuração PRODUCTION.
+> - [x] Para build do sistema, use o comando: `npm run build-dev` para buildar o sistema em configuração `DEVELOPMENT`.
+> - [x] Para build do sistema, use o comando: `npm run build-qa` para buildar o sistema em configuração `QA`.
+> - [x] Para build do sistema, use o comando: `npm run build-stg` para buildar o sistema em configuração `STAGING`.
+> - [x] Para build do sistema, use o comando: `npm run build-prod` para buildar o sistema em configuração `PRODUCTION`.
 > - [x] Uma vez o build feito, vai criar a pasta `dist`, ai é só rodar o comando `firebase deploy` / (Autênticação é necessária!)
 
 ## Preview app
