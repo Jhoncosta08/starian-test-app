@@ -2,13 +2,15 @@
 
   "PAGES": {
     "PRODUCTS": {
-      "MANAGE_PRODUCT": "Gerenciar Produtos"
+      "MANAGE_PRODUCT": "Gerenciar Produtos",
+      "DETAILS_PRODUCT": "Detalhes do Produto"
     }
   },
 
   "ERRORS": {
     "PRODUCTS_LIST_ERROR": "Erro ao consultar a lista de produtos!",
-    "PRODUCT_DELETE_ERROR": "Erro ao tentar excluir o produto!"
+    "PRODUCT_DELETE_ERROR": "Erro ao tentar excluir o produto!",
+    "PRODUCT_GET_ERROR": "Erro ao consultar o produto!"
   },
 
   "MODALS": {
