@@ -93,8 +93,8 @@
   };
 
   & .pagination .page-item.disabled .page-link {
-    color: var(--Sideral-Grey);
-    background-color: var(--Sideral-Grey);
+    color: var(--Bright-White);
+    background-color: var(--info);
     cursor: not-allowed;
     pointer-events: none;
   };
