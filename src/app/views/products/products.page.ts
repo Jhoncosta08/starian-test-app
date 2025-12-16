@@ -16,9 +16,9 @@ import {CommonButtonComponent} from '../../components/common-button/common-butto
 })
 export class ProductsPage implements OnInit {
   protected products: ProductsInterface[] = [];
-  private productsService: ProductsService = inject(ProductsService);
-  private toastService: ToastrService = inject(ToastrService);
-  private translateService: TranslateService = inject(TranslateService);
+  private readonly productsService: ProductsService = inject(ProductsService);
+  private readonly toastService: ToastrService = inject(ToastrService);
+  private readonly translateService: TranslateService = inject(TranslateService);
 
   ngOnInit(): void {
     this.getAllProducts();
