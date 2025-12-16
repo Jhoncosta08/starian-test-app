@@ -6,7 +6,7 @@
   min-height: 30px;
   padding: 10px 15px !important;
   border-radius: 8px;
-}
+};
 
 .primary {
   background-color: var(--Galaxy-Black);
@@ -15,8 +15,8 @@
   &:hover {
     background-color: var(--Space-Grey);
     color: var(--Bright-White);
-  }
-}
+  };
+};
 
 .secondary {
   background-color: var(--Space-Grey);
@@ -25,8 +25,8 @@
   &:hover {
     background-color: var(--Sideral-Grey);
     color: var(--Bright-White);
-  }
-}
+  };
+};
 
 .outlined {
   background-color: transparent;
@@ -36,8 +36,8 @@
   &:hover {
     background-color: var(--Bright-White);;
     color: var(--Galaxy-Black);
-  }
-}
+  };
+};
 
 .outlined-black {
   background-color: transparent;
@@ -47,11 +47,11 @@
   &:hover {
     background-color: var(--Galaxy-Black);;
     color: var(--Bright-White);
-  }
-}
+  };
+};
 
 .danger {
   background-color: var(--danger);
   border: none;
   color: #fff;
-}
+};

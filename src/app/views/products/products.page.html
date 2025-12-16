@@ -1,8 +1,8 @@
 
-<div class="row">
+<div class="row align-items-center title-box">
   <div class="col-sm-6">
     <h1 class="page-title">
-      {{'PAGES.PRODUCTS.MANAGE_PRODUCT' | translate}}
+      {{ 'PAGES.PRODUCTS.MANAGE_PRODUCT' | translate }}
     </h1>
   </div>
 
@@ -13,5 +13,14 @@
       [buttonStyle]="'primary'"
       (clicked)="addNewProduct()"
     ></app-common-button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <app-common-table
+      [tableData]="products"
+      [columnsToDisplay]="columnsToDisplay"
+    ></app-common-table>
   </div>
 </div>
