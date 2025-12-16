@@ -8,7 +8,7 @@
 > e build/deploy pensado para ambientes (dev/qa/stg/prod) e publicação via Firebase.
 
 ## URL do projeto:
-[Gerenciador de Produtos](https://lol-guide-web.web.app)
+[Gerenciador de Produtos](https://starian-test-app.web.app)
 
 ## As principais tecnologias usadas no projeto
 >* Este projeto foi feito com [Angular CLI](https://github.com/angular/angular-cli) version 20.3.0.
