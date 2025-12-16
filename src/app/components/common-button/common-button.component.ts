@@ -1,10 +1,11 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@angular/core';
-import {NgClass} from '@angular/common';
+import {NgClass, NgStyle} from '@angular/common';
 
 @Component({
   selector: 'app-common-button',
   imports: [
-    NgClass
+    NgClass,
+    NgStyle
   ],
   templateUrl: './common-button.component.html',
   styleUrls: ['./common-button.component.scss', '../../shared/scss/hover-effects.scss'],
@@ -15,4 +16,5 @@ export class CommonButtonComponent {
   @Input({required: true}) buttonText: string = 'Button';
   @Input() type: 'button' | 'submit' = 'button';
   @Input() buttonStyle: 'primary' | 'secondary' | 'outlined' | 'outlined-black' | 'danger' = 'primary';
+  @Input() disableButton: boolean = false;
 }

@@ -5,7 +5,7 @@ input, textarea, select {
   width: 100%;
   color: var(--Galaxy-Black);
   letter-spacing: 2px;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 };
 
 input:focus, input:active, input:checked {
@@ -18,7 +18,7 @@ input::placeholder {
   opacity: 0.5;
   color: var(--Space-Grey);
   letter-spacing: 2px;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 };
 
 label {
@@ -34,3 +34,7 @@ small {
   color: var(--danger);
   font-size: 0.7rem;
 };
+
+.form-group {
+  margin-bottom: 0.8rem;
+}

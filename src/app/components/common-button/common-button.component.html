@@ -1,4 +1,6 @@
 <button
+  [ngStyle]="{opacity: disableButton ? 0.5 : 1}"
+  [disabled]="disableButton"
   [type]="type"
   class="simple-button hvr-float"
   [ngClass]="buttonStyle"

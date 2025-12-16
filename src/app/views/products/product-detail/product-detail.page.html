@@ -10,7 +10,7 @@
 @if (showSpinner) {
   <app-common-spinner></app-common-spinner>
 } @else {
-  <form [formGroup]="productDetailForm">
+  <form [formGroup]="productDetailForm" (ngSubmit)="submitProductForm($event)">
     <div class="row gap-2">
 
       <div class="col-sm product-form-box">
@@ -25,10 +25,14 @@
         </div>
 
         <div class="form-group">
-          <label for="image">Imagem:</label>
+          <label for="image">
+            {{ 'PAGES.PRODUCTS_DETAILS.IMAGE' | translate }}:
+          </label>
           <input class="form-control" type="text" name="image" id="image" formControlName="image" />
           @if (productDetailForm.get('image')?.invalid) {
-            <small class="form-text">URL obrigatória</small>
+            <small class="form-text">
+              {{ 'PAGES.PRODUCTS_DETAILS.URL_REQUIRED' | translate }}
+            </small>
           }
         </div>
       </div>
@@ -36,21 +40,29 @@
 
       <div class="col-sm product-form-box">
 
-        <div class="form-group">
-          <label for="product-id">id:</label>
-          <input class="form-control opacity-25" type="text" name="product-id" id="product-id" formControlName="id" readonly/>
-        </div>
+        @if (productId) {
+          <div class="form-group">
+            <label for="product-id">id:</label>
+            <input class="form-control opacity-25" type="text" name="product-id" id="product-id" formControlName="id" readonly/>
+          </div>
+        }
 
         <div class="form-group">
-          <label for="title">Título:</label>
+          <label for="title">
+            {{ 'PAGES.PRODUCTS_DETAILS.TITLE' | translate }}:
+          </label>
           <input class="form-control" type="text" name="title" id="title" formControlName="title" />
           @if (productDetailForm.get('title')?.invalid) {
-            <small class="form-text">Título obrigatório</small>
+            <small class="form-text">
+              {{ 'PAGES.PRODUCTS_DETAILS.TITLE_REQUIRED' | translate }}
+            </small>
           }
         </div>
 
         <div class="form-group">
-          <label for="price">Preço:</label>
+          <label for="price">
+            {{ 'PAGES.PRODUCTS_DETAILS.PRICE' | translate }}:
+          </label>
           <input
             class="form-control"
             type="text"
@@ -63,15 +75,21 @@
             prefix="R$: "
           />
           @if (productDetailForm.get('price')?.invalid) {
-            <small class="form-text">Preço obrigatório</small>
+            <small class="form-text">
+              {{ 'PAGES.PRODUCTS_DETAILS.PRICE_REQUIRED' | translate }}
+            </small>
           }
         </div>
 
         <div class="form-group">
-          <label for="category">Categoria:</label>
+          <label for="category">
+            {{ 'PAGES.PRODUCTS_DETAILS.CATEGORY' | translate }}:
+          </label>
           <input class="form-control" type="text" name="category" id="category" formControlName="category" />
           @if (productDetailForm.get('category')?.invalid) {
-            <small class="form-text">Categoria obrigatória</small>
+            <small class="form-text">
+              {{ 'PAGES.PRODUCTS_DETAILS.CATEGORY_REQUIRED' | translate }}
+            </small>
           }
         </div>
 
@@ -79,7 +97,9 @@
 
       <div class="col-sm product-form-box">
         <div class="form-group">
-          <label for="description">Descrição:</label>
+          <label for="description">
+            {{ 'PAGES.PRODUCTS_DETAILS.DESCRIPTION' | translate }}
+          </label>
           <textarea
             class="form-control"
             type="text"
@@ -90,7 +110,9 @@
           >
           </textarea>
           @if (productDetailForm.get('description')?.invalid) {
-            <small class="form-text">Descrição obrigatória</small>
+            <small class="form-text">
+              {{ 'PAGES.PRODUCTS_DETAILS.DESCRIPTION_REQUIRED' | translate }}
+            </small>
           }
         </div>
       </div>
@@ -100,16 +122,22 @@
     <div class="row">
       <div class="col-sm-12 text-end mt-3">
         <div class="form-group">
-          @if (showSubmitSpinner) {
-            <app-common-spinner></app-common-spinner>
-          } @else {
-            <app-common-button
-              [buttonText]="productId ? 'Editar produto' : 'Cadatrar produto'"
-              [type]="'submit'"
-              [buttonStyle]="'primary'"
-            >
-            </app-common-button>
-          }
+          <app-common-button
+            class="me-2"
+            [buttonText]="'Cancelar'"
+            [type]="'button'"
+            [buttonStyle]="'outlined-black'"
+            (clicked)="onCancel()"
+          >
+          </app-common-button>
+
+          <app-common-button
+            [buttonText]="productId ? ('BUTTONS.EDIT_PRODUCT' | translate) : ('BUTTONS.NEW_PRODUCT' | translate)"
+            [type]="'submit'"
+            [buttonStyle]="'primary'"
+            [disableButton]="isSubmitting"
+          >
+          </app-common-button>
         </div>
       </div>
     </div>

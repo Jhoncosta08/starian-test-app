@@ -10,6 +10,7 @@ import {UtilsService} from '../../services/utils/utils.service';
 import {ModalService} from '../../services/modal/modal.service';
 import {ModalConfirmation} from '../../modals/modal-confirmation/modal-confirmation';
 import {CommonSpinnerComponent} from '../../components/common-spinner/common-spinner.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -34,6 +35,7 @@ export class ProductsPage implements OnInit {
   private readonly translateService: TranslateService = inject(TranslateService);
   private readonly utilsService: UtilsService = inject(UtilsService);
   private readonly modalService: ModalService = inject(ModalService);
+  private readonly router: Router = inject(Router);
 
   ngOnInit(): void {
     this.setTableHeadersData();
@@ -68,12 +70,8 @@ export class ProductsPage implements OnInit {
     });
   };
 
-  addNewProduct(): void {
-    console.warn('addNewProduct clicked');
-  }
-
   updateProduct(product: ProductsInterface): void {
-    console.warn('updateProduct clicked', product);
+    this.moveRouteForward(product.id);
   }
 
   deleteProduct(product: ProductsInterface): void {
@@ -89,6 +87,11 @@ export class ProductsPage implements OnInit {
         }
       });
     });
+  }
+
+  moveRouteForward(productId?: number): void {
+    const path: string = productId ? `/produtos/${productId}` : 'produtos/novo';
+    void this.router.navigate([path]);
   }
 
 }
