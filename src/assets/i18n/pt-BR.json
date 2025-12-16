@@ -2,8 +2,9 @@
 
   "PAGES": {
     "PRODUCTS": {
-      "MANAGE_PRODUCT": "Gerenciar Produtos",
+      "MANAGE_PRODUCT": "Produtos",
       "DETAILS_PRODUCT": "Detalhes do Produto",
+      "ADD_PRODUCT": "Novo Produto",
       "NEW_PRODUCT": "Produto adicionado com sucesso!",
       "UPDATE_PRODUCT": "Produto atualizado com sucesso!"
     },

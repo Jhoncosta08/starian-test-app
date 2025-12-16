@@ -2,11 +2,13 @@ import {Component, inject, OnInit} from '@angular/core';
 import {NavigationEnd, Router, RouterOutlet} from '@angular/router';
 import {filter} from 'rxjs';
 import {TranslateService} from '@ngx-translate/core';
+import {HeaderComponent} from './components/nav/header/header.component';
 
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet
+    RouterOutlet,
+    HeaderComponent
   ],
   templateUrl: './app.html',
 })

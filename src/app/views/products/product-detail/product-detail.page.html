@@ -2,7 +2,7 @@
 <div class="row align-items-center title-box">
   <div class="col-sm-12">
     <h1 class="page-title">
-      {{ 'PAGES.PRODUCTS.DETAILS_PRODUCT' | translate }}
+      {{ (productId ? 'PAGES.PRODUCTS.DETAILS_PRODUCT' : 'PAGES.PRODUCTS.ADD_PRODUCT') | translate }}
     </h1>
   </div>
 </div>
@@ -132,7 +132,7 @@
           </app-common-button>
 
           <app-common-button
-            [buttonText]="productId ? ('BUTTONS.EDIT_PRODUCT' | translate) : ('BUTTONS.NEW_PRODUCT' | translate)"
+            [buttonText]="(productId ? 'BUTTONS.EDIT_PRODUCT' : 'BUTTONS.NEW_PRODUCT') | translate"
             [type]="'submit'"
             [buttonStyle]="'primary'"
             [disableButton]="isSubmitting"

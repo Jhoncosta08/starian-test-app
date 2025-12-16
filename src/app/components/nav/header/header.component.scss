@@ -1,0 +1,22 @@
+
+.main-header {
+  background-color: var(--Galaxy-Black);
+  min-height: 60px;
+  box-shadow: 0 2px 5px var(--Sideral-Grey);
+};
+
+.header-title {
+  border-left: 1px solid var(--Bright-White);
+  margin: 0 1rem;
+  padding: 0 1rem;
+  color: var(--Bright-White);
+  font-size: 1rem;
+  letter-spacing: 2px;
+};
+
+.header-welcome {
+  color: var(--Bright-White);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin: 0 1rem;
+};
