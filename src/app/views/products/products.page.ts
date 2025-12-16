@@ -18,7 +18,7 @@ import {CommonTableComponent} from '../../components/common-table/common-table.c
 })
 export class ProductsPage implements OnInit {
   protected products: ProductsInterface[] = [];
-  protected columnsToDisplay: string[] = ['image', 'id', 'title', 'price', 'category'];
+  protected columnsToDisplay: string[] = ['image', 'id', 'title', 'price', 'category', 'actions'];
   private readonly productsService: ProductsService = inject(ProductsService);
   private readonly toastService: ToastrService = inject(ToastrService);
   private readonly translateService: TranslateService = inject(TranslateService);

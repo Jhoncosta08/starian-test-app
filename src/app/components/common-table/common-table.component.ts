@@ -1,18 +1,19 @@
-import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
-import {NgClass, NgOptimizedImage} from '@angular/common';
+import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
+import {NgClass} from '@angular/common';
 
 @Component({
   selector: 'app-common-table',
   imports: [
     NgClass,
-    NgOptimizedImage,
   ],
   templateUrl: './common-table.component.html',
-  styleUrl: './common-table.component.scss',
+  styleUrls: ['./common-table.component.scss', '../../shared/scss/hover-effects.scss'],
 })
 export class CommonTableComponent implements OnChanges  {
   @Input({required: true}) tableData: any[] = [];
   @Input({required: true}) columnsToDisplay: string[] = [];
+  @Output() detailsClicked: EventEmitter<any> = new EventEmitter<any>();
+  @Output() deleteClicked: EventEmitter<any> = new EventEmitter<any>();
   currentPage: number = 1;
   pageSize: number = 5;
   pagedData: any[] = [];
@@ -49,28 +50,25 @@ export class CommonTableComponent implements OnChanges  {
       this.sortDirection = true;
     }
 
-    this.tableData.sort((a: any, b: any): 0 | 1 | -1 => {
-      let valA: any = a[column];
-      let valB: any = b[column];
+    this.tableData.sort((a: any, b: any): number => {
+      let valA = a[column];
+      let valB = b[column];
 
-      if (column === 'data') {
-        valA = new Date(valA);
-        valB = new Date(valB);
-      } else if (column === 'valor') {
-        valA = parseFloat(valA);
-        valB = parseFloat(valB);
-      } else {
-        valA = valA.toString().toLowerCase();
-        valB = valB.toString().toLowerCase();
+      if (valA == null) return 1;
+      if (valB == null) return -1;
+
+      if (typeof valA === 'number' && typeof valB === 'number') {
+        return this.sortDirection ? valA - valB : valB - valA;
       }
 
-      if (valA < valB) return this.sortDirection ? -1 : 1;
-      if (valA > valB) return this.sortDirection ? 1 : -1;
-      return 0;
+      return this.sortDirection
+        ? valA.toString().localeCompare(valB.toString(), undefined, { sensitivity: 'base' })
+        : valB.toString().localeCompare(valA.toString(), undefined, { sensitivity: 'base' });
     });
 
     this.setPage(1);
   }
+
 
   getSortIcon(column: string): string {
     if (this.sortColumn !== column) return 'bi bi-arrow-down-up';

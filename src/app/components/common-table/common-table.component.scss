@@ -24,6 +24,12 @@
   width: 10%;
 };
 
+.col-actions {
+  width: 120px;
+  max-width: 120px;
+  text-align: center;
+};
+
 .table-image {
   object-fit: cover;
   border-radius: 4px;
@@ -92,6 +98,23 @@
     cursor: not-allowed;
     pointer-events: none;
   };
+};
+
+.actions-container {
+  & i {
+    font-size: 1rem;
+    padding: 5px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--Galaxy-Black);
+    margin: 0 5px;
+    transition: 0.4s ease-in-out;
+  }
+
+  & .delete-icon:hover {
+    transition: 0.4s ease-in-out;
+    color: var(--danger);
+    border-color: var(--danger);
+  }
 };
 
 @media only screen and (max-width: 575px) {

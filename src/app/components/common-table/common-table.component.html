@@ -9,10 +9,15 @@
               [ngClass]="{
               'col-id': column === 'id',
               'col-title': column === 'title',
-              'col-image': column === 'image'
+              'col-image': column === 'image',
+              'col-actions': column === 'actions'
               }"
             >
-              <span>{{ column }} <i (click)="sortData(column)" [ngClass]="getSortIcon(column)"></i> </span>
+              <span>{{ column }}
+                @if (column !== 'image' && column !== 'actions' ) {
+                  <i (click)="sortData(column)" [ngClass]="getSortIcon(column)"></i>
+                }
+              </span>
             </th>
           }
         </tr>
@@ -23,16 +28,39 @@
           <tr>
             @for(column of columnsToDisplay; track column) {
               <td [attr.title]="column === 'title' ? item[column] : null">
-                @if (column === 'image') {
-                  <img
-                    [ngSrc]="item[column]"
-                    width="30"
-                    height="30"
-                    alt="image"
-                    class="table-image"
-                  />
-                } @else {
-                  {{ item[column] }}
+                @switch (column) {
+
+                  @case ('image') {
+                    <img
+                      [src]="item[column]"
+                      width="30"
+                      height="30"
+                      alt="image"
+                      class="table-image"
+                      loading="lazy"
+                    />
+                  }
+
+                  @case ('actions') {
+                    <div class="actions-container">
+                      <i
+                        class="bi bi-eye hvr-float"
+                        role="button"
+                        (click)="detailsClicked.emit(item)"
+                      ></i>
+
+                      <i
+                        class="bi bi-trash delete-icon hvr-float"
+                        role="button"
+                        (click)="deleteClicked.emit(item)"
+                      ></i>
+                    </div>
+                  }
+
+                  @default {
+                    {{ item[column] }}
+                  }
+
                 }
               </td>
             }
