@@ -14,7 +14,7 @@
       "TITLE": "Título",
       "TITLE_REQUIRED": "Título obrigatório",
       "PRICE": "Preço",
-      "PRICE_REQUIRED": "Preço",
+      "PRICE_REQUIRED": "Preço obrigatório",
       "CATEGORY": "Categoria",
       "CATEGORY_REQUIRED": "Categoria obrigatória",
       "DESCRIPTION": "Descrição",
