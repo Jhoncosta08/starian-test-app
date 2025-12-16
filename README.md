@@ -56,7 +56,7 @@
 ~~~
 
 ## Bootstrap componentes
->Você pode ver os componentes disponíveis para usar Bootstrap e ng-bootstrap clicando nos links abaixo:
+>Você pode ver os componentes disponíveis para usar o Bootstrap clicando no link abaixo:
 >* [bootstrap components](https://getbootstrap.com/docs/5.3/components)
 
 ## Modularização
