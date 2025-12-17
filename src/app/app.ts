@@ -17,6 +17,7 @@ export class App implements OnInit {
 
   ngOnInit(): void {
     this.translate.addLangs(['pt-BR', 'en-US']);
+    this.translate.setFallbackLang('pt-BR');
     this.translate.use('pt-BR').subscribe({
       next: (): any => (this.isAppReady = true),
       error: (): any => (this.isAppReady = true)
