@@ -28,7 +28,14 @@
           <label for="image">
             {{ 'PAGES.PRODUCTS_DETAILS.IMAGE' | translate }}:
           </label>
-          <input class="form-control" type="text" name="image" id="image" formControlName="image" />
+
+          <input
+            class="form-control"
+            type="text"
+            name="image"
+            id="image"
+            formControlName="image"
+          />
           @if (productDetailForm.get('image')?.invalid) {
             <small class="form-text">
               {{ 'PAGES.PRODUCTS_DETAILS.URL_REQUIRED' | translate }}
@@ -43,7 +50,14 @@
         @if (productId) {
           <div class="form-group">
             <label for="product-id">id:</label>
-            <input class="form-control opacity-25" type="text" name="product-id" id="product-id" formControlName="id" readonly/>
+            <input
+              class="form-control opacity-25"
+              type="text"
+              name="product-id"
+              id="product-id"
+              formControlName="id"
+              readonly
+            />
           </div>
         }
 
@@ -51,7 +65,14 @@
           <label for="title">
             {{ 'PAGES.PRODUCTS_DETAILS.TITLE' | translate }}:
           </label>
-          <input class="form-control" type="text" name="title" id="title" formControlName="title" />
+
+          <input
+            class="form-control"
+            type="text"
+            name="title"
+            id="title"
+            formControlName="title"
+          />
           @if (productDetailForm.get('title')?.invalid) {
             <small class="form-text">
               {{ 'PAGES.PRODUCTS_DETAILS.TITLE_REQUIRED' | translate }}
@@ -85,7 +106,14 @@
           <label for="category">
             {{ 'PAGES.PRODUCTS_DETAILS.CATEGORY' | translate }}:
           </label>
-          <input class="form-control" type="text" name="category" id="category" formControlName="category" />
+
+          <input
+            class="form-control"
+            type="text"
+            name="category"
+            id="category"
+            formControlName="category"
+          />
           @if (productDetailForm.get('category')?.invalid) {
             <small class="form-text">
               {{ 'PAGES.PRODUCTS_DETAILS.CATEGORY_REQUIRED' | translate }}
@@ -124,7 +152,7 @@
         <div class="form-group btn-actions-box">
           <app-common-button
             class="action-btn"
-            [buttonText]="'Cancelar'"
+            [buttonText]="'BUTTONS.CANCEL' | translate"
             [type]="'button'"
             [buttonStyle]="'outlined-black'"
             (clicked)="onCancel()"

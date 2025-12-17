@@ -75,7 +75,9 @@
           <nav>
             <ul class="pagination">
               <li class="page-item" [class.disabled]="currentPage === 1">
-                <a class="page-link" (click)="setPage(currentPage - 1)">Anterior</a>
+                <a class="page-link" (click)="setPage(currentPage - 1)">
+                  {{ 'TABLE.PREVIOUS' | translate }}
+                </a>
               </li>
               @for (page of getPages(); track page) {
                 <li class="page-item" [class.active]="page === currentPage">
@@ -83,7 +85,9 @@
                 </li>
               }
               <li class="page-item" [class.disabled]="currentPage === getTotalPages()">
-                <a class="page-link" (click)="setPage(currentPage + 1)">Próxima</a>
+                <a class="page-link" (click)="setPage(currentPage + 1)">
+                  {{ 'TABLE.NEXT' | translate }}
+                </a>
               </li>
             </ul>
           </nav>

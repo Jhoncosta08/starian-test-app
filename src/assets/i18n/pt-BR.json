@@ -53,6 +53,13 @@
       "PRICE": "Preço",
       "CATEGORIES": "Categorias",
       "ACTIONS": "Ações"
-    }
+    },
+    "NEXT": "Próxima",
+    "PREVIOUS": "Anterior"
+  },
+
+  "HEADER": {
+    "TITLE": "Gerenciador de Produtos",
+    "WELCOME": "Bem vindo!"
   }
 }
