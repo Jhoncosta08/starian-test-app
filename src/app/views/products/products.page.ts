@@ -76,6 +76,7 @@ export class ProductsPage implements OnInit {
 
   deleteProduct(product: ProductsInterface): void {
     void this.modalService.open(ModalConfirmation).then((): void => {
+      this.showSpinner = true;
       this.productsService.deleteProduct(product.id).subscribe({
         next: (): void => {
           this.getAllProducts();
@@ -84,6 +85,7 @@ export class ProductsPage implements OnInit {
         error: (error: Error): void => {
           const errorMsg: string = this.translateService.instant('ERRORS.PRODUCT_DELETE_ERROR');
           console.error(errorMsg, error);
+          this.showSpinner = false;
         }
       });
     });
