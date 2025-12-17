@@ -11,7 +11,7 @@
 [Gerenciador de Produtos](https://starian-test-app.web.app)
 
 ## Documentação do projeto:
-[Documentação Técnica do Front-End](https://github.com/Jhoncosta08/starian-test-app/blob/master/src/assets/docs/documentacao-tecnica-frontend.pdf)
+[Documentação Técnica do Front-End](https://github.com/Jhoncosta08/starian-test-app/raw/master/src/assets/docs/documentacao-tecnica-frontend.pdf)
 
 ## As principais tecnologias usadas no projeto
 >* Este projeto foi feito com [Angular CLI](https://github.com/angular/angular-cli) versão 20.3.0.
