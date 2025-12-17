@@ -10,6 +10,9 @@
 ## URL do projeto:
 [Gerenciador de Produtos](https://starian-test-app.web.app)
 
+## Documentação do projeto:
+[Documentação Técnica do Front-End](https://github.com/Jhoncosta08/starian-test-app/blob/master/src/assets/docs/documentacao-tecnica-frontend.pdf)
+
 ## As principais tecnologias usadas no projeto
 >* Este projeto foi feito com [Angular CLI](https://github.com/angular/angular-cli) versão 20.3.0.
 >* Este projeto conta com o [Bootstrap](https://getbootstrap.com) versão 5.3.8
@@ -75,8 +78,8 @@
 | Guards        | `name.guard.ts` / `compound-name.guard.ts`                      | 
 
 ## Como clonar e configurar o projeto
-> - [x] Certifique-se que tem o `node.js` instalado, a vesão necessária é a: `24.11.0`.
-> - [x] A versão do `NPM` usada na criação desse projeto é a: `11.6.1`.
+> Certifique-se que tem o `node.js` instalado, a vesão necessária é a: `24.11.0`.
+> A versão do `NPM` usada na criação desse projeto é a: `11.6.1`.
 > - [x] Clone o projeto, use o código: `git clone <project-url>` para clonar o projeto.
 > - [x] Instale os pacotes npm, use o código: `npm i` para instalar os pacotes.
 > - [x] Execute o projeto, use o código: `npm run dev` para rodar o projeto na configuração de DEVELOPMENT.
@@ -89,12 +92,17 @@
 > Navegue até `http://localhost:4200/`. A aplicação será recarregada automaticamente se você alterar qualquer um dos arquivos de código-fonte.
 
 ## Como fazer o build por ambiente
-> - [x] O projeto conta com configurações personalizadas por ambiente.
+> O projeto conta com configurações personalizadas por ambiente.
 > - [x] Para build do sistema, use o comando: `npm run build-dev` para buildar o sistema em configuração `DEVELOPMENT`.
 > - [x] Para build do sistema, use o comando: `npm run build-qa` para buildar o sistema em configuração `QA`.
 > - [x] Para build do sistema, use o comando: `npm run build-stg` para buildar o sistema em configuração `STAGING`.
 > - [x] Para build do sistema, use o comando: `npm run build-prod` para buildar o sistema em configuração `PRODUCTION`.
 > - [x] Uma vez o build feito, vai criar a pasta `dist`, ai é só rodar o comando `firebase deploy` / (Autênticação é necessária!)
+
+## Como rodar o Lint
+> O projeto conta com Lint para padronização de código.
+> - [x] Sempre que quiser checar se ta nos padrões, basta rodar o comando `ng lint` no terminal
+> - [x] No terminal, se tiver tudo certo vai aparecer que todos os arquivos passaram no lint, se houver um erro, vai mostrar no terminal
 
 ## Preview app
 ![image](https://github.com/Jhoncosta08/starian-test-app/blob/master/src/assets/images/previews/preview-one.jpg)
