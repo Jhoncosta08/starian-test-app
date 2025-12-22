@@ -8,7 +8,7 @@
 > e build/deploy pensado para ambientes (dev/qa/stg/prod) e publicação via Firebase.
 
 ## URL do projeto:
-[Gerenciador de Produtos](https://starian-test-app.web.app)
+[Gerenciador de Produtos](https://product-mgr.web.app)
 
 ## Documentação do projeto:
 [Documentação Técnica do Front-End](https://github.com/Jhoncosta08/product-management-app/raw/master/src/assets/docs/documentacao-tecnica-frontend.pdf)
