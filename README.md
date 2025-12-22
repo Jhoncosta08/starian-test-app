@@ -11,7 +11,7 @@
 [Gerenciador de Produtos](https://starian-test-app.web.app)
 
 ## Documentação do projeto:
-[Documentação Técnica do Front-End](https://github.com/Jhoncosta08/starian-test-app/raw/master/src/assets/docs/documentacao-tecnica-frontend.pdf)
+[Documentação Técnica do Front-End](https://github.com/Jhoncosta08/product-management-app/raw/master/src/assets/docs/documentacao-tecnica-frontend.pdf)
 
 ## As principais tecnologias usadas no projeto
 >* Este projeto foi feito com [Angular CLI](https://github.com/angular/angular-cli) versão 20.3.0.
@@ -105,8 +105,8 @@
 > - [x] No terminal, se tiver tudo certo vai aparecer que todos os arquivos passaram no lint, se houver um erro, vai mostrar no terminal
 
 ## Preview app
-![image](https://github.com/Jhoncosta08/starian-test-app/blob/master/src/assets/images/previews/preview-one.jpg)
-![image](https://github.com/Jhoncosta08/starian-test-app/blob/master/src/assets/images/previews/preview-two.jpg)
+![image](https://github.com/Jhoncosta08/product-management-app/blob/master/src/assets/images/previews/preview-one.jpg)
+![image](https://github.com/Jhoncosta08/product-management-app/blob/master/src/assets/images/previews/preview-two.jpg)
 
 ### Observação sobre Login
 >O fluxo de login/autenticação não foi implementado porque não fazia parte do escopo funcional exigido para este teste, 

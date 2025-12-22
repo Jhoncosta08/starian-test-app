@@ -1,7 +1,7 @@
 
 {
   "hosting": {
-    "public": "dist/starian-test/browser",
+    "public": "dist/product-mgr/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

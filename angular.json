@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "starian-test": {
+    "product-mgr": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -164,10 +164,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "starian-test:build:production"
+              "buildTarget": "product-mgr:build:production"
             },
             "development": {
-              "buildTarget": "starian-test:build:development"
+              "buildTarget": "product-mgr:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -1,5 +1,5 @@
 {
-  "name": "starian-test",
+  "name": "product-mgr",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
